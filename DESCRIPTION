@@ -1,0 +1,14 @@
+Package: pupR
+Type: Package
+Title: Your Daily Dose of Doggo
+Version: 0.1.0
+Authors@R: c(person("Melissa", "Innerst", email = "melissaninnerst@gmail.com", role = c("aut","cre")),
+  person("Grant", "Innerst", email = "grant.innerst@gmail.com", role = c("ctb")))
+Maintainer: Melissa Innerst <melissaninnerst@gmail.com>
+Description: Do you love R? Do you love dogs? Then you're going to love this package! 
+    It brings cute doggos and puppers straight to your plot window. 
+    This is just for fun, and it is a work in progress. Be kind!
+Encoding: UTF-8
+License: GPL-2
+LazyData: true
+RoxygenNote: 6.1.1
