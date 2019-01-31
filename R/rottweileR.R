@@ -21,9 +21,17 @@ rottweileR <- function(){
   nothiddendoggos <- html_attr(hiddendoggos,"src")
   nothiddendoggos <- nothiddendoggos[-grep("static", nothiddendoggos)]
 
+  # Wait... We are missing some
+  extrasneakydoggos <- html_attr(hiddendoggos,"data-lazy-srcset")
+  extrasneakydoggos <- str_split(na.omit(str_remove_all(extrasneakydoggos,"[1-9]x")),",")
+  extrasneakydoggos <- unlist(extrasneakydoggos)
+
+  # Round them all up
+  goodboyz <- c(nothiddendoggos, extrasneakydoggos)
+
   # Take them home
   temporary_file_location <- paste0(tempdir(), "/doggo.png")
-  download.file(nothiddendoggos[sample(1:length(nothiddendoggos),1)],
+  download.file(goodboyz[sample(1:length(goodboyz),1)],
                 temporary_file_location, mode = "wb")
 
   # Bring the doggo to R
