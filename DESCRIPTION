@@ -8,6 +8,9 @@ Maintainer: Melissa Innerst <melissaninnerst@gmail.com>
 Description: Do you love R? Do you love dogs? Then you're going to love this package! 
     It brings cute doggos and puppers straight to your plot window. 
     This is just for fun, and it is a work in progress. Be kind!
+Imports:
+  rvest,
+  imager
 Encoding: UTF-8
 License: GPL-2
 LazyData: true
