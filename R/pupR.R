@@ -4,16 +4,18 @@
 #'
 #' @return A photo of a dog is downloaded and displayed in the plot window.
 #'
-#' @import rvest
-#' @import imager
+#' @importFrom rvest html_session html_nodes html_attr
+#' @importFrom imager load.image
+#' @importFrom stringr str_split str_remove_all
 #'
 #' @examples
 #' pupR()
 #'
 #' @export
 pupR <- function(){
+
   # This is where all the doggos are
-  dogpark <- html_session("https://pixabay.com/en/photos/dog/")
+  dogpark <- html_session('https://pixabay.com/en/photos/dog/?image_type=photo')
 
   # Play hide and seek with the doggos
   hiddendoggos <- html_nodes(dogpark, "img")
@@ -24,7 +26,7 @@ pupR <- function(){
 
   # Wait... We are missing some
   extrasneakydoggos <- html_attr(hiddendoggos,"data-lazy-srcset")
-  extrasneakydoggos <- str_split(na.omit(str_remove_all(extrasneakydoggos,"[1-9]x")),",")
+  extrasneakydoggos <- str_split(na.omit(str_remove_all(extrasneakydoggos,"[1-9]x")),", ")
   extrasneakydoggos <- unlist(extrasneakydoggos)
 
   # Round them all up
