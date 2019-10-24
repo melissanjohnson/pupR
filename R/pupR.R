@@ -26,7 +26,7 @@ pupR <- function(){
 
   # Wait... We are missing some
   extrasneakydoggos <- html_attr(hiddendoggos,"data-lazy-srcset")
-  extrasneakydoggos <- str_split(na.omit(str_remove_all(extrasneakydoggos,"[1-9]x")),", ")
+  extrasneakydoggos <- str_split(na.omit(str_remove_all(extrasneakydoggos," [1-9]x")),", ")
   extrasneakydoggos <- unlist(extrasneakydoggos)
 
   # Round them all up
