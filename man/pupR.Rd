@@ -4,7 +4,13 @@
 \alias{pupR}
 \title{pupR}
 \usage{
-pupR()
+pupR(dog_type = "dog")
+}
+\arguments{
+\item{dog_type}{The type of doggo you want to stare at!
+It is defaulted to 'dog', but you can choose to search for a specific type.
+If the type of doggo you are searching for has more than one word, make
+sure to include the URL encoder for space (+ or %20) in between them.}
 }
 \value{
 A photo of a dog is downloaded and displayed in the plot window.
@@ -14,5 +20,7 @@ Your daily dose of doggo!
 }
 \examples{
 pupR()
+
+pupR(dog_type = "great+dane")
 
 }

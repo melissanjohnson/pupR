@@ -2,9 +2,11 @@
 
 export(pupR)
 export(rottweileR)
+importFrom(graphics,plot)
 importFrom(imager,load.image)
 importFrom(rvest,html_attr)
 importFrom(rvest,html_nodes)
 importFrom(rvest,html_session)
 importFrom(stringr,str_remove_all)
 importFrom(stringr,str_split)
+importFrom(utils,download.file)

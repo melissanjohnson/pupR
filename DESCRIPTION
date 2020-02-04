@@ -1,7 +1,7 @@
 Package: pupR
 Type: Package
 Title: Your Daily Dose of Doggo
-Version: 0.1.0
+Version: 0.2.0
 Authors@R: c(person("Melissa", "Innerst", email = "melissaninnerst@gmail.com", role = c("aut","cre")),
   person("Grant", "Innerst", email = "grant.innerst@gmail.com", role = c("ctb")))
 Maintainer: Melissa Innerst <melissaninnerst@gmail.com>
@@ -15,4 +15,4 @@ Imports:
 Encoding: UTF-8
 License: GPL-2
 LazyData: true
-RoxygenNote: 6.1.1
+RoxygenNote: 7.0.2
