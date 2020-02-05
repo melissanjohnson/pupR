@@ -3,9 +3,9 @@
 #' Your daily dose of doggo!
 #'
 #' @param dog_type The type of doggo you want to stare at!
-#'      It is defaulted to 'dog', but you can choose to search for a specific type.
+#'      The argument is defaulted to 'dog', but you can choose to search for a specific type.
 #'      If the type of doggo you are searching for has more than one word, make
-#'      sure to include the URL encoder for space (+ or %20) in between them.
+#'      sure to include the URL encoder for space (+ or \%20) in between them.
 #'
 #' @return A photo of a dog is downloaded and displayed in the plot window.
 #'
