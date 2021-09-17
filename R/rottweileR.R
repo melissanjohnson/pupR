@@ -11,8 +11,9 @@
 #' @export
 #'
 rottweileR <- function(){
+
   # This is where all the doggos are
-  dogpark <- html_session("https://free-images.com/search/?q=rottweiler&cat=st")
+  dogpark <- session("https://free-images.com/search/?q=rottweiler&cat=st")
 
   hiddendoggos <- html_nodes(dogpark, "img")
 

@@ -9,10 +9,9 @@
 #'
 #' @return A photo of a dog is downloaded and displayed in the plot window.
 #'
-#' @importFrom rvest html_session html_nodes html_attr
+#' @importFrom rvest session html_nodes html_attr
 #' @importFrom imager load.image
 #' @importFrom stringr str_split str_remove_all
-#' @importFrom graphics plot
 #' @importFrom utils download.file
 #'
 #' @examples
@@ -25,8 +24,9 @@ pupR <- function(dog_type = "dog"){
 
   # make the url
   url <- paste0('https://free-images.com/search/?q=', dog_type, '&cat=st')
+
   # This is where all the doggos are
-  dogpark <- html_session(url = url)
+  dogpark <- session(url = url)
 
   # Play hide and seek with the doggos
   hiddendoggos <- html_nodes(dogpark, "img")
